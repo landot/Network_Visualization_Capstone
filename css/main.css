@@ -1,0 +1,74 @@
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css);
+
+.axis line, .axis path {
+  fill: none;
+  stroke: #000;
+}
+
+.title {
+	text-anchor:middle;
+}
+
+.axis text {
+  font-size:10px;
+}
+
+.bar {
+  fill:green;
+  opacity:.4;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+div {
+  text-align: center;
+}
+
+.link {
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+.node {
+  fill: #000;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+line {
+  fill: #000;
+  stroke: #000;
+  stroke-width: 1.5px;
+}
+
+svg {
+  background-color: lightblue;
+}
+
+/*
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+*/
+
+/*.ui-helper-hidden-accessible{
+    display: none;
+}*/
+
+d3-tip {
+    line-height: 1;
+    color: black;
+}
