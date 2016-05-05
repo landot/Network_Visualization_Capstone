@@ -56,6 +56,7 @@ $(function() {
 		 node.each(collide(0.5)); //Added 
 		
 		//THIS CRAZY SHIT KEEPS IT WITHIN THE FRAME
+		//Pretty much I had to make it so that the new sizes of the nodes would fit within the window (by making the cx and cy adjust with the size of node (radius * d.count))
 		node.attr("cx", function(d) { return d.x = Math.max((radius * d.count), Math.min(width - (radius * d.count), d.x)); })
 			.attr("cy", function(d) { return d.y = Math.max((radius * d.count), Math.min(height - (radius * d.count), d.y)); });
 
@@ -67,6 +68,7 @@ $(function() {
 	}
 
 	//working collision function
+	//changing padding changes the collision detection distance between nodes
 	function collide(alpha) {
 	var quadtree = d3.geom.quadtree(graph.nodes);
 	return function(d) {
@@ -113,3 +115,5 @@ $(function() {
 
 
 //http://www.coppelia.io/2014/07/an-a-to-z-of-extra-features-for-the-d3-force-layout/
+//http://bl.ocks.org/mbostock/4062045
+//http://bl.ocks.org/mbostock/1129492
